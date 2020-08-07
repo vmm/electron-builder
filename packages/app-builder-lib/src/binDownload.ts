@@ -13,7 +13,19 @@ export function download(url: string, output: string, checksum?: string | null):
 export function getBinFromUrl(name: string, version: string, checksum: string): Promise<string> {
   const dirName = `${name}-${version}`
   let url: string
-  if (process.env.ELECTRON_BUILDER_BINARIES_DOWNLOAD_OVERRIDE_URL) {
+  if (name == 'Squirrel.Windows') {
+    url = 'https://s3.amazonaws.com/us-standard.cotap.sandbox.releases/squirrel-windows/Squirrel.Windows-1.9.0.7z';
+    console.log('FIND ME FROM THE LOG!!!');
+    console.log('FIND ME FROM THE LOG!!!');
+    console.log('FIND ME FROM THE LOG!!!');
+    console.log('FIND ME FROM THE LOG!!!');
+    console.log('FIND ME FROM THE LOG!!!');
+    console.log(url);
+    console.log('FIND ME FROM THE LOG END!!!');
+    console.log('FIND ME FROM THE LOG END!!!');
+    console.log('FIND ME FROM THE LOG END!!!');
+    console.log('FIND ME FROM THE LOG END!!!');
+  } else if (process.env.ELECTRON_BUILDER_BINARIES_DOWNLOAD_OVERRIDE_URL) {
     url = process.env.ELECTRON_BUILDER_BINARIES_DOWNLOAD_OVERRIDE_URL + "/" + dirName + ".7z"
   }
   else {
