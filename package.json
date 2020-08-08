@@ -1,6 +1,6 @@
 {
+  "name": "@electron-builder/monorepo",
   "productName": "electron-builder",
-  "name": "electron-builder",
   "version": "21.2.0",
   "private": true,
   "workspaces": [
